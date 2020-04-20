@@ -1,6 +1,6 @@
 # covidreport
 
-A new Flutter application.
+This app shows the report of selected country. There are only nine countries now but we can add more.
 
 ## Getting Started
 
