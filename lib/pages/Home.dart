@@ -1,5 +1,6 @@
+import 'package:covidreport/service/api_world_report.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -8,6 +9,22 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   Map data = {};
 
+  void getWorldReport() async{
+    WorldReport instance = WorldReport();
+    await instance.getReport();
+    Navigator.pushNamed(context, '/world', arguments: {
+      'confirmed': instance.confirmed,
+      'deaths': instance.deaths,
+      'newDeaths': instance.newDeaths,
+      'recovered': instance.recovered
+    });
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
   @override
   Widget build(BuildContext context) {
     data = data.isNotEmpty ? data : ModalRoute
@@ -18,6 +35,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       backgroundColor: Colors.blue[200],
+
       body: SafeArea(
         child: Container(
           child: Padding(
@@ -144,6 +162,20 @@ class _HomeState extends State<Home> {
                     color: Colors.black,
                   ),
                 ),
+                SizedBox(height: 20.0,),
+                RaisedButton(
+                  color: Colors.amber,
+                  onPressed: () {
+                     getWorldReport();
+                  },
+                  child: Text(
+                    'World Report',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+
               ],
             ),
           ),

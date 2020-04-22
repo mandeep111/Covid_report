@@ -12,11 +12,16 @@ class _SelectCountryState extends State<SelectCountry> {
   CovidReport(country: 'france'),
   CovidReport(country: 'germany'),
   CovidReport(country: 'norway'),
-  CovidReport(country: 'korea'),
+  CovidReport(country: 'south-korea'),
   CovidReport(country: 'japan'),
   CovidReport(country: 'spain'),
   CovidReport(country: 'nepal'),
   CovidReport(country: 'india'),
+  CovidReport(country: 'australia'),
+  CovidReport(country: 'iran'),
+  CovidReport(country: 'canada'),
+  CovidReport(country: 'united-kingdom'),
+  CovidReport(country: 'china'),
   ];
 
   void updateReport(index) async {

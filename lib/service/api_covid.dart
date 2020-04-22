@@ -19,9 +19,6 @@ class CovidReport {
 
   Future<void> getReport() async {
     try {
-      Response global = await get('https://api.covid19api.com/summary');
-      Map map = jsonDecode(global.body);
-      print(map['Global']);
       Response response = await get(
           'https://api.covid19api.com/live/country/$country/status/confirmed');
       List list = jsonDecode(response.body);
