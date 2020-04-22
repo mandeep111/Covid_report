@@ -14,7 +14,7 @@ class _WorldState extends State<World> {
         .of(context)
         .settings
         .arguments;
-//    print(data);
+    print(data);
 
     return Scaffold(
       backgroundColor: Colors.blue[200],
