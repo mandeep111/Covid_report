@@ -24,7 +24,6 @@ class _LoadingState extends State<Loading> {
     super.initState();
     setupReport();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
