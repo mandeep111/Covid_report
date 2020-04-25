@@ -14,12 +14,13 @@ class _WorldState extends State<World> {
         .of(context)
         .settings
         .arguments;
-    print(data);
+//    print(data);
 
     return Scaffold(
       backgroundColor: Colors.blue[200],
       appBar: AppBar(
         title: Text('World Report'),
+        backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
           child: Container(
@@ -39,9 +40,9 @@ class _WorldState extends State<World> {
                   Text(
                     data['confirmed'].toString(),
                     style: TextStyle(
-                      fontSize: 28.0,
+                      fontSize: 35.0,
                       letterSpacing: 2.0,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 20.0,),
@@ -57,9 +58,9 @@ class _WorldState extends State<World> {
                   Text(
                     data['deaths'].toString(),
                     style: TextStyle(
-                      fontSize: 28.0,
+                      fontSize: 35.0,
                       letterSpacing: 2.0,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 20.0,),
@@ -76,9 +77,9 @@ class _WorldState extends State<World> {
                   Text(
                     data['newDeaths'].toString(),
                     style: TextStyle(
-                      fontSize: 28.0,
+                      fontSize: 35.0,
                       letterSpacing: 2.0,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 20.0,),
@@ -94,9 +95,9 @@ class _WorldState extends State<World> {
                   Text(
                     data['recovered'].toString(),
                     style: TextStyle(
-                      fontSize: 28.0,
+                      fontSize: 35.0,
                       letterSpacing: 2.0,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 20.0,),

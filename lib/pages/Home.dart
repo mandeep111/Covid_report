@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Container(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 20, 0, 10),
+            padding: const EdgeInsets.fromLTRB(60, 20, 0, 10),
             child: Column(
               children: <Widget>[
                 FlatButton.icon(
@@ -61,13 +61,13 @@ class _HomeState extends State<Home> {
                   },
                   icon: Icon(
                     Icons.edit_location,
-                    color: Colors.amber,
+                    color: Colors.deepOrange,
                     size: 30.0,
                   ),
                   label: Text(
                     'Select Country',
                     style: TextStyle(
-                      color: Colors.amber,
+                      color: Colors.deepOrange,
                       fontSize: 30.0
                     ),
                   ),
@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 10.0),
                 Text(
-                  data['date'],
+                  data['date'].substring(0,10),
                   style: TextStyle(
                     fontSize: 35.0,
                     color: Colors.black,
@@ -164,7 +164,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 20.0,),
                 RaisedButton(
-                  color: Colors.amber,
+                  color: Colors.deepOrange,
                   onPressed: () {
                      getWorldReport();
                   },
